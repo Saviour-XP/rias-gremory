@@ -1,66 +1,46 @@
 {
-    "name": "rias-gremory",
-    "description": "Next level botto void",
-    "keywords": [
-      "bot",
-      "whatsapp",
-      "stickers",
-      "whatsapp-stickers",
-      "anime",
-      "whatsapp-bot",
-      "whatsapp-sticker-bot",
-      "whatsapp-botto"
-    ],
-    "website": "https://github.com/well300/rias-gremory#readme",
-    "repository": "https://github.com/well300/rias-gremory.git",
-    "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFglBpqhgdxp7Lm4xiFoLOJQDndO_ncEvQX-P3zmQSkNhqhyC_p47vlw-M5dGscBdq6jY&usqp=CAU",
-    "success_url": "/",
-    "env": {
-      "PREFIX": {
-        "description": "Prefix of your bot",
-        "value": "!"  
-      },
-      "SESSION": {
-        "description": "A string for the session to be classified and to get access to the server endpoints",
-          "value": "well300" 
-      },
-      "MODS": {
-        "description": "The phone numbers of the users who you want to be admin for the bot (should be in international format without + and multiple numbers must be separated by a comma \",\")",
-        "required": false,
-        "value": "917842346461"  
-      },
-      "CRON": {
-        "description": "Cron string to clear chats in a cycle",
-        "required": false,
-          "value": "null" 
-      },
-      "MONGO_URI": {
-        "description": "A secret String for Mongodb Connection.(Required)"
-      },
-      "GOOGLE_API_KEY": {
-        "description": "Google API key for Google searches for MODS (Not Required)",
-        "required": false,
-        "value": "AIzaSyAZk1RkHiTen4-3h6Gmq-m8GqNGrlbJvUY"  
-      },
-      "CHAT_BOT_URL" : {
-        "description": "BrainShop API Brain url",
-        "required" : false,
-        "value": "http://api.brainshop.ai/get?bid=160314&key=GIeApGNOIGG22UQ1&uid=[uid]&msg=[msg]" 
-      }
+  "name": "Chisato-WhatsApp",
+  "description": "A WhatsApp Bot written in TypeScript using Baileys.",
+  "keywords": [
+    "bot",
+    "whatsapp",
+    "whatsapp-bot",
+    "whatsapp-anime-bot"
+  ],
+  "logo": "https://raw.githubusercontent.com/AliAryanTech/Chisato-WhatsApp/master/assets/images/chisato.png",
+  "website": "https://github.com/AliAryanTech/Chisato-WhatsApp#readme",
+  "repository": "https://github.com/AliAryanTech/Chisato-WhatsApp.git",
+  "success_url": "/",
+  "env": {
+    "BOT_NAME": {
+        "description": "Name of your bot"
     },
-    "buildpacks": [
-      {
-        "url": "heroku/nodejs"
-      },
-      {
-        "url": "https://github.com/PrajjwalDatir/heroku-buildpack-imagemagick.git"
-      },
-  
-      {
-        "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"
-      },
-      {
-        "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
-      }
-    ]
-  }
+    "PREFIX": {
+      "description": "Prefix of your bot"
+    },
+    "SESSION": {
+      "description": "A string for the session to be classified and to get access to the server endpoints"
+    },
+    "MODS": {
+      "description": "The phone numbers of the users who you want to be admin for the bot (should be in international format without + and multiple numbers must be separated by a comma \",\")",
+      "required": false
+    },
+    "MONGO_URI": {
+      "description": "A secret String for Mongodb Connection.(Required)"
+    },
+    "CHAT_BOT_URL": {
+      "description": "Your API key from Brainshop"
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+    }
+  ]
+}
